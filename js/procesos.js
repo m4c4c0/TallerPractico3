@@ -116,7 +116,6 @@ if(indexedDB && form){
                     modelos:e.target.modelo.value,
                     colores:e.target.color.value,
                     nombres:e.target.nombre.value, 
-                    apellidos: e.target.apellido.value,
                     duis: e.target.numdu.value,
                     nits: e.target.nit.value,
                     anios: e.target.anio.value,
