@@ -2,9 +2,6 @@ const  indexedDB = window.indexedDB;
 const form = document.getElementById('form');
 const carros = document.getElementById('carros');
 
-
-
-
 if(indexedDB && form){
     let db;
     //creacion de la base de datos, lleva 1 ya que al no llevar ese parametro, por registro se crearía una base de datos diferente
