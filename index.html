@@ -1,102 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Taller Practico 3 </title>
-    </head>
+        <meta charset="utf-8">
+        <title>Inderxed DB </title>
+        <link rel="stylesheet" href="/css/style.css">
 
-    <body>
+        <script src="js/validarcarros.js"></script>
         
+    </head>
+    <body background="img/84248.png">
         <header>
             <h1 align="center"> Formulario de control de automoviles </h1>
         </header>
-
+        <div class="containerxd">
+            <form id="form" name="form" class="form">
+                <h3>Apartado personal:</h3>
+                <div class="tablita">
+                    <label>DUI</label>
+                    <input type="text" name="numdu" id="numdu">
+                    <label>Nombres</label>
+                    <input type="text" name="nombre" id="nombre">
+                    <label>Apellidos</label>
+                    <input type="text" name="apellido" id="apellido">
+                    <label>Ingrese su NIT: </label>
+                    <input type="text" name="nit" id="nit">
+                </div>
+            </div>
         <section>
             <article>
+                    <h3>Apartado de automóvil:</h3>
+                    <div class="carrosdate">
+                    <fieldset id="fldcarro">
+                        <legend><span class="labelcar">Datos del carro</span></legend>
+                        
+                            <label for="marca">Fabricante: </label>
+                            <select name="marca" id="marca">
+                            <option value="Toyota">Toyota</option>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Hyundai">Hyundai</option>
+                            <option value="Volkswagen">Volkswagen</option>
+                            <option value="Chevrolet">Chevrolet</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Mitsubishi">Mitsubishi</option>
+                            </select>
 
-                <h3>Apartado personal:</h3>
+                        <label for="modelo">Modelo: </label>
+                            <select name="modelo" id="modelo">
+                            <option value="Corolla">Corolla</option>
+                            <option value="Echo">Echo</option>
+                            <option value="Yaris">Yaris</option>
+                            <option value="Avensis">Avensis</option>
+                            <option value="Camry">Camry</option>
+                            <option value="Land Cruiser">Land Cruiser</option>
+                            <option value="4 Runner">4 Runner</option>
+                            <option value="Hilux">Hilux</option>
+                            </select>
 
-                <fieldset>
-                    <legend><span>Datos del cliente:</span></legend>
+                        
+                        
+                        <label for="txtanio">Placa:</label>
+                        <input type="number" name="txtplaca"  id="placa" maxlength="6" /><br><br>
+                        
+                        <label for="txtanio">Año: </label>
+                        <input type="number" name="txtanio" placeholder="2012" maxlength="4" id="anio" /><br><br>
+
+                        <label>Color de automovil:</label>
+                        <input type="text" name="color" id="color">
+
+                        <label>Fallo del automovil</label>
+                        <input type="text" name="fallo" id="fallo">
+
+                        
+                    </fieldset>
+                <div>
+                    <div class="boton">
+                        <button class="button" id="enviar" >Enviar</button>
+                    </div>
                     
-                    <label for="name">Nombre conmpleto: </label>
-                    <input type="text" name="nombre" id="nombre" ><br> <br>
-
-                    <label for="name">Ingrese su DUI: </label>
-                    <input type="text" name="numdu" id="numdu" ><br> <br>
-
-                    <label for="name">Ingrese su NIT: </label>
-                    <input type="text" name="apellido" id="apellido" /><br> <br> 
-                </fieldset>
-
-                <h3>Apartado de automóvil:</h3>
-                
-                <fieldset id="fldcarro" class="group">
-                    <legend><span class="labelgroup">Datos del vehiculo</span></legend>
-                    
-                    <label for="selfab">Marcas: </label>
-                    <select name="selmar" id="selmar">
-                        <option value="Toyota">Toyota</option>
-                        <option value="Nissan">Nissan</option>
-                        <option value="Honda">Honda</option>
-                        <option value="Subaru">Subaru</option>
-                        <option value="Mazda">Mazda</option>
-                    </select>
-
-                    <label for="selmode">Modelo: </label>
-                    <select name="selmode" id="selmode">
-                        <option value="Corolla">Corolla</option>
-                        <option value="Echo">Echo</option>
-                        <option value="Hilux">Hilux</option>
-                        <option value="Hiace">Toyota Hiace</option>
-                        <option value="Supra">Supra</option>
-                        <option value="Camry">Camry</option>
-                        <option value="Etios">Etios</option>
-                    </select><br><br>
-
-                    <label for="txtanio">Placa:</label>
-                    <input type="number" name="txtplaca" maxlength="4" /><br><br>
-                    
-                    <label for="txtanio">Año: </label>
-                    <input type="number" name="txtanio" placeholder="2012" maxlength="4" /><br><br>
-                    
-                    <label for="radcolor" class="colores">Color:</label><br>
-                    
-                    <input type="radio" name="radcolor" >
-                    <label>Blanco</label><br>
-
-                    <input type="radio" name="radcolor" >
-                    <label>Negro</label><br>
-
-                    <input type="radio" name="radcolor" >
-                    <label>Azul</label><br>
-
-                    <input type="radio" name="radcolor" >
-                    <label>Gris</label><br>
-
-                    <input type="radio" name="radcolor" >
-                    <label>Verde</label><br>
-
-                    <input type="radio" name="radcolor" >
-                    <label>Rojo</label><br>   
-                </fieldset>
-
-                    <p>
-                        Presione + E para editar y Ctrl+S para guardar y ESC para cancelarlo.
-                    </p>
-                    <label for="fallas">Ingrese las fallas que presenta el vehiculo:</label>
-                    <div id="vista"></div>
-                    <textarea name="mensaje" id="area" value="Mensaje" id="mensaje"></textarea>
-                </div>
-                
-      
+                </form>
             </article>
             <div id="carros" class="carros">
+                
+            </div>
         </section>
+        <script src="js/procesos.js"></script>
+        
 
-        <script> src="js/procesos.js" </script>
     </body>
+    
+    
+
 </html>
